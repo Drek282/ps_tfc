@@ -1,0 +1,282 @@
+<?xml version="1.0" ?>
+<maps>
+ <map name='2fort' gametype='halflife' modtype='tfc'>
+  <minx>-1730</minx>
+  <miny>-3960</miny>
+  <maxx>1730</maxx>
+  <maxy>3960</maxy>
+  <res>264x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='2morfort' gametype='halflife' modtype='tfc'>
+  <minx>-1505</minx>
+  <miny>-4010</miny>
+  <maxx>1180</maxx>
+  <maxy>420</maxy>
+  <res>600x364</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='avanti' gametype='halflife' modtype='tfc'>
+  <minx>-1650</minx>
+  <miny>-3270</miny>
+  <maxx>2255</maxx>
+  <maxy>3590</maxy>
+  <res>342x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='badlands' gametype='halflife' modtype='tfc'>
+  <minx>-3200</minx>
+  <miny>-3630</miny>
+  <maxx>3190</maxx>
+  <maxy>3615</maxy>
+  <res>600x530</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='bam' gametype='halflife' modtype='tfc'>
+  <minx>-2650</minx>
+  <miny>-3200</miny>
+  <maxx>2650</maxx>
+  <maxy>3200</maxy>
+  <res>600x498</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='bases2k1' gametype='halflife' modtype='tfc'>
+  <minx>-1450</minx>
+  <miny>-3730</miny>
+  <maxx>3320</maxx>
+  <maxy>3045</maxy>
+  <res>422x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='bases_r2' gametype='halflife' modtype='tfc'>
+  <minx>-1595</minx>
+  <miny>-2965</miny>
+  <maxx>1540</maxx>
+  <maxy>2965</maxy>
+  <res>321x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='betrayed' gametype='halflife' modtype='tfc'>
+  <minx>-3560</minx>
+  <miny>-3960</miny>
+  <maxx>4030</maxx>
+  <maxy>4050</maxy>
+  <res>600x572</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='casbah' gametype='halflife' modtype='tfc'>
+  <minx>-2080</minx>
+  <miny>-3845</miny>
+  <maxx>3190</maxx>
+  <maxy>3570</maxy>
+  <res>429x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='crossover2' gametype='halflife' modtype='tfc'>
+  <minx>-1145</minx>
+  <miny>-3680</miny>
+  <maxx>1145</maxx>
+  <maxy>3680</maxy>
+  <res>192x600</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='cydonia2' gametype='halflife' modtype='tfc'>
+  <minx>-1335</minx>
+  <miny>-3800</miny>
+  <maxx>1335</maxx>
+  <maxy>3800</maxy>
+  <res>600x213</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='cz2' gametype='halflife' modtype='tfc'>
+  <minx>-2385</minx>
+  <miny>-3200</miny>
+  <maxx>2665</maxx>
+  <maxy>3710</maxy>
+  <res>600x441</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='dustbowl' gametype='halflife' modtype='tfc'>
+  <minx>-3940</minx>
+  <miny>-2830</miny>
+  <maxx>3065</maxx>
+  <maxy>3370</maxy>
+  <res>600x530</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='epicenter' gametype='halflife' modtype='tfc'>
+  <minx>-1635</minx>
+  <miny>-2935</miny>
+  <maxx>2475</maxx>
+  <maxy>3005</maxy>
+  <res>600x415</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='flagrun' gametype='halflife' modtype='tfc'>
+  <minx>-3710</minx>
+  <miny>-940</miny>
+  <maxx>3710</maxx>
+  <maxy>2495</maxy>
+  <res>600x276</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='fortsake2' gametype='halflife' modtype='tfc'>
+  <minx>-1985</minx>
+  <miny>-3895</miny>
+  <maxx>2170</maxx>
+  <maxy>700</maxy>
+  <res>600x542</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='hunted' gametype='halflife' modtype='tfc'>
+  <minx>-2600</minx>
+  <miny>-2215</miny>
+  <maxx>1740</maxx>
+  <maxy>2040</maxy>
+  <res>600x590</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='mulch_trench' gametype='halflife' modtype='tfc'>
+  <minx>-3380</minx>
+  <miny>-875</miny>
+  <maxx>3515</maxx>
+  <maxy>1300</maxy>
+  <res>600x359</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='murderball' gametype='halflife' modtype='tfc'>
+  <minx>-3240</minx>
+  <miny>-2355</miny>
+  <maxx>1680</maxx>
+  <maxy>2460</maxy>
+  <res>600x586</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='nml' gametype='halflife' modtype='tfc'>
+  <minx>-1330</minx>
+  <miny>-3325</miny>
+  <maxx>1445</maxx>
+  <maxy>3885</maxy>
+  <res>600x232</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='nml3' gametype='halflife' modtype='tfc'>
+  <minx>-4015</minx>
+  <miny>-4010</miny>
+  <maxx>4005</maxx>
+  <maxy>3810</maxy>
+  <res>600x585</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='nuclear' gametype='halflife' modtype='tfc'>
+  <minx>-3090</minx>
+  <miny>-2625</miny>
+  <maxx>1275</maxx>
+  <maxy>3070</maxy>
+  <res>600x578</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='openfire' gametype='halflife' modtype='tfc'>
+  <minx>-3425</minx>
+  <miny>-1740</miny>
+  <maxx>2320</maxx>
+  <maxy>1350</maxy>
+  <res>600x322</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='osaka' gametype='halflife' modtype='tfc'>
+  <minx>-3825</minx>
+  <miny>-3970</miny>
+  <maxx>3990</maxx>
+  <maxy>3970</maxy>
+  <res>600x591</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='push' gametype='halflife' modtype='tfc'>
+  <minx>-1505</minx>
+  <miny>-3515</miny>
+  <maxx>1470</maxx>
+  <maxy>3520</maxy>
+  <res>600x257</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='ravelin' gametype='halflife' modtype='tfc'>
+  <minx>-1500</minx>
+  <miny>-3905</miny>
+  <maxx>1490</maxx>
+  <maxy>3915</maxy>
+  <res>600x230</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='rock2' gametype='halflife' modtype='tfc'>
+  <minx>-2745</minx>
+  <miny>-3925</miny>
+  <maxx>2750</maxx>
+  <maxy>3930</maxy>
+  <res>600x420</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='totalwar' gametype='halflife' modtype='tfc'>
+  <minx>-3650</minx>
+  <miny>-1270</miny>
+  <maxx>3630</maxx>
+  <maxy>1280</maxy>
+  <res>600x211</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='turkeyburgers' gametype='halflife' modtype='tfc'>
+  <minx>-90</minx>
+  <miny>110</miny>
+  <maxx>1940</maxx>
+  <maxy>1745</maxy>
+  <res>600x437</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='warpath' gametype='halflife' modtype='tfc'>
+  <minx>-3715</minx>
+  <miny>-2985</miny>
+  <maxx>3920</maxx>
+  <maxy>2975</maxy>
+  <res>600x468</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+ <map name='well' gametype='halflife' modtype='tfc'>
+  <minx>-1470</minx>
+  <miny>-4035</miny>
+  <maxx>1460</maxx>
+  <maxy>4040</maxy>
+  <res>600x218</res>
+  <flipv>1</flipv>
+  <fliph>0</fliph>
+ </map>
+</maps>
