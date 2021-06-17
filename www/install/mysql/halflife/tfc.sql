@@ -186,7 +186,7 @@ INSERT INTO `ps_config_plrbonuses` (`id`, `eventname`, `enactor`, `enactor_team`
         (74,'sentry_destroyed',2,0,0,0,'A player destroyed a sentry gun.','halflife','tfc'),
         (75,'teleporter_entrance_destroyed',2,0,0,0,'A player destroyed a teleporter entrance.','halflife','tfc'),
         (76,'teleporter_exit_destroyed',2,0,0,0,'A player destroyed a teleporter exit.','halflife','tfc'),
-        (77,'medic_heal',1,0,0,0,'A medic treated a team mate.','halflife','tfc'),
+        (77,'medic_heal',0.01,0,0,0,'A medic treated a team mate.','halflife','tfc'),
         (78,'mapspecial',1,0,0,0,'A player completed a special map objective.','halflife','tfc'),
         (79,'huntedescapes',10,0,0,0,'The hunted escaped.','halflife','tfc');
 
