@@ -290,3 +290,7 @@ INSERT INTO `ps_role` (`roleid`, `uniqueid`, `name`, `team`)
         (9, 'scout', 'Scout', NULL),
         (10, 'spy', 'Spy', NULL),
         (11, 'civilian', 'Civilian', NULL);
+        
+INSERT INTO `ps_config` (`id`, `conftype`, `section`, `var`, `value`, `label`, `type`, `locked`, `verifycodes`, `options`, `help`) 
+    VALUES 
+        (1,'main',NULL,'meta_keywords','PsychoStats Game Server Player Statistics Team Fortress Classic TFC Valve','Site HTML Meta Key Words','text',0,'','','These are the HTML meta key words for your PsychoStats.  They are used by search engines to provide search results.');
