@@ -9,7 +9,7 @@ if (!defined("PSYCHOSTATS_PAGE")) die("Unauthorized access to " . basename(__FIL
 if (defined("CLASS_PS_HALFLIFE_TFC_PHP")) return 1;
 define("CLASS_PS_HALFLIFE_TFC_PHP", 1);
 
-include_once(rtrim(dirname(__DIR__), '/\\') . '/halflife.php');
+include_once(dirname(__DIR__) . '/halflife.php');
 
 class PS_halflife_tfc extends PS_halflife {
 
@@ -62,9 +62,13 @@ var $CLAN_MODTYPES = array(
     'bandage'       => '+',
 );
 
-function PS_halflife_tfc(&$db) {
+function __construct(&$db) {
 	parent::PS_halflife($db);
 	$this->CLAN_MAP_MODTYPES = $this->CLAN_MODTYPES;
+}
+
+function PS_halflife_tfc(&$db) {
+    self::__construct($db);
 }
 
 // Add or remove columns from maps.php listing
