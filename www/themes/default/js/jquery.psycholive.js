@@ -166,7 +166,7 @@
 				}
 				if (!game || typeof game != 'object' || game.error) {
 					if (game && game.error.constructor == String) {
-						this.canvas.message('Error loading game:<br />' + game.error,'MC');
+						this.canvas.message('Error loading game:<br>' + game.error,'MC');
 					} else {
 						this.canvas.message('Error loading game','MC');
 					}
@@ -202,7 +202,7 @@
 					},
 					error: function(xhr, status, exception) {
 						;;; debug4('getJSON(error, ' + status + ')');
-						$this.canvas.message('Error loading game:<br />' + status,'MC');
+						$this.canvas.message('Error loading game:<br>' + status,'MC');
 					}
 				});
 			}
@@ -1396,7 +1396,7 @@
 			this.opt = opt;
 			this.attached = undefined;
 			this.dom = $('<div id="' + this.id + '" class="entity entity-' + this.name + '">' +
-				'<img src="' + this.opt.decals_url + this.opt.decals['entity_' + name] + ' />' +
+				'<img src="' + this.opt.decals_url + this.opt.decals['entity_' + name] + '>' +
 				'</div>')
 				.css({
 					position: 'absolute',
@@ -1632,7 +1632,7 @@
 					padding: 0
 				});
 			// display an 'initializing...' message
-			this.msg_init = this.message('PsychoLive<br />Initializing...', 'MC');
+			this.msg_init = this.message('PsychoLive<br>Initializing...', 'MC');
 			this.paused = false;
 			return this;
 		},
@@ -1655,7 +1655,7 @@
 					.fadeOut('normal', function(){ $(this).remove(); });
 
 				// slap the new overlay onto our background
-				$this.background = $('<img class="pslive-overlay" src="' + this.src + '" />')
+				$this.background = $('<img class="pslive-overlay" src="' + this.src + '">')
 					.hide()
 					.data('width', this.width)	// save original size
 					.data('height', this.height)	// ...
