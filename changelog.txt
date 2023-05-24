@@ -3,3 +3,4 @@
 
 Version 3.2.8b (in progress)
 * [Fixed] HTML errors/warnings.
+* [Fixed] PHP 8 errors/warnings.
