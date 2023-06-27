@@ -4,3 +4,4 @@
 Version 3.2.8b (in progress)
 * [Fixed] HTML errors/warnings.
 * [Fixed] PHP 8 errors/warnings.
+* [Changed] Pages will now display error message if javascript is disabled.
