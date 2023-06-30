@@ -50,6 +50,12 @@
 {if $show_admin}
 	<li><a href="{url _base='admin/index.php'}"><#Admin#></a></li>
 {/if}
+{if !ps_user_logged_in() and $show_login and $cookieconsent}
+	<li><a href="login.php" title="Login, Register and Reset Password"><#Login#></a></li>
+{/if}
+{if ps_user_logged_in()}
+	<li><a href="logout.php"><#Logout#></a></li>
+{/if}
 </ul>
 </div>
 <!---->
