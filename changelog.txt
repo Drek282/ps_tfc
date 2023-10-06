@@ -8,3 +8,4 @@ Version 3.2.8n (in progress)
 * [Added] GDPR compliance.
 * [Fixed] Broken quick login.
 * [Changed] Version string to indicate "nightly" status of current working version.
+* [Added] Reset button next to the search field on the Players page.
