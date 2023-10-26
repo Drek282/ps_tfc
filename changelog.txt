@@ -9,3 +9,4 @@ Version 3.2.8n (in progress)
 * [Fixed] Broken quick login.
 * [Changed] Version string to indicate "nightly" status of current working version.
 * [Added] Reset button next to the search field on the Players page.
+* [Fixed] Search string length limited to 50 characters.
