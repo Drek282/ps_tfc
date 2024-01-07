@@ -30,10 +30,10 @@
 	There is an 'oldhalflife' query_type that can be used to force older halflife queries.
 
 	Query:		HL1 send:	HL1 recv: 	HL2 send: 	HL2 recv:
-	'info'		'T'		'm'		'T'		'I'	(different packet stream)
-	'players'	'U'		'D'		'U'		'D'	(the same)
-	'rules'		'V'		'o'		'V'		'E'	(different codes, same packet stream)
-	'ping'		'i'		'j'		'i'		'j'	(the same)
+	'info'		'T'			'm'			'T'			'I'	(different packet stream)
+	'players'	'U'			'D'			'U'			'D'	(the same)
+	'rules'		'V'			'o'			'V'			'E'	(different codes, same packet stream)
+	'ping'		'i'			'j'			'i'			'j'	(the same)
 
 	RCON commands are also supported for both versions, HL1 and HL2 (transparently)
 
@@ -145,7 +145,8 @@ function query_info($ip=NULL) {
 	if (!$ip) $ip = $this->ipaddr();
 	if (!$ip) return FALSE;
 	$start = $this->_getmicrotime();
-	$res = $this->_sendquery($ip, $this->infostr);
+	//$res = $this->_sendquery($ip, $this->infostr);
+	$res = $this->_sendquery($ip, $this->infostr . pack("V", $this->_getchallenge($ip)));
 	$end = $this->_getmicrotime();
 	if (!$res) return FALSE;
 	$ver = $this->_hlver();			// get proper version 
@@ -170,7 +171,7 @@ function query_info($ip=NULL) {
 
 // internal function to parse halflife verion 1 'info' packets
 function _parse_info_halflife1() {
-	if ($this->DEBUG) print "DEBUG: Parsing Halflife1 info packet...\n";
+	if ($this->DEBUG) print nl2br("DEBUG: Parsing Halflife1 info packet...\n");
 	$this->raw = substr($this->raw, 5);		// strip off response header bytes
 	$this->data['int_ipport'] 	= $this->_getnullstr();
 	list($this->data['int_ip'], $this->data['int_port']) 	= explode(':', $this->data['int_ipport']);
@@ -198,14 +199,14 @@ function _parse_info_halflife1() {
 
 // internal function to parse halflife version 2 'info' packets
 function _parse_info_halflife2() {
-	if ($this->DEBUG) print "DEBUG: Parsing Halflife2 info packet...\n";
+	if ($this->DEBUG) print nl2br("DEBUG: Parsing Halflife2 info packet...\n");
 	$this->raw = substr($this->raw, 5);	// strip off response header bytes
 	$this->data['protocol']			= $this->_getbyte();	// 6
 	$this->data['name'] 			= $this->_getnullstr();
 	$this->data['map'] 			= $this->_getnullstr();
 	$this->data['gamedir'] 			= $this->_getnullstr();
 	$this->data['gamename'] 		= $this->_getnullstr();
-	$this->data['appid']			= $this->_getbyte() | ($this->_getbyte() << 8);
+	$this->data['appid']			= $this->_getshort();// | ($this->_getbyte() << 8);
 	$this->data['totalplayers']		= $this->_getbyte();
 	$this->data['maxplayers']		= $this->_getbyte();
 	$this->data['maxbots']			= $this->_getbyte();
@@ -267,8 +268,9 @@ function query_rules($ip=NULL) {
 	$res = $this->_sendquery($ip, $this->rulestr . pack("V", $this->_getchallenge($ip)));
 	if (!$res) return FALSE;
 	if (!empty($this->raw)) {
+
 		$this->raw = substr($this->raw, 5);		// strip off response header bytes
-		$this->data['totalrules'] = ($this->_getbyte() | ($this->_getbyte() << 8)) - 1;
+		$this->data['totalrules'] = ($this->_getshort());// | ($this->_getbyte() << 8)) - 1;
 		$this->data['rules'] = array();
 		for ($i=1; $i <= $this->data['totalrules']; $i++) {
 			if ($this->raw == '') break;
@@ -460,7 +462,7 @@ function _rconwrite2($cmd, $str1="", $str2="") {
 	$authid = $this->rcon_auth_id;
 	$data = pack("VV", $authid, $cmd) . $str1 . "\0" . $str2 . "\0";
 	$packet = pack("V", strlen($data)) . $data;
-	if ($this->DEBUG) print "DEBUG: Sending rcon packet:\n" . $this->hexdump($packet) . "\n";
+	if ($this->DEBUG) print nl2br("DEBUG: Sending rcon packet:\n" . $this->hexdump($packet) . "\n");
 	return @fwrite($this->rconsock, $packet, strlen($packet));
 }
 
@@ -547,7 +549,7 @@ function _sendquery($ipport, $cmd) {
 	$command = pack("V", -1) . $cmd;
 	$this->raw = "";
 
-	if ($this->DEBUG) print "DEBUG: Sending query to $ip:$port:\n" . $this->hexdump($command) . "\n";
+	if ($this->DEBUG) print "DEBUG: Sending query to $ip:$port:\n" . $this->hexdump($command);
 	fwrite($this->sock, $command, strlen($command));
 	$start = $this->_getmicrotime();
 
@@ -568,7 +570,7 @@ function _sendquery($ipport, $cmd) {
 		}
 
 		$time = sprintf("%0.4f", $this->_getmicrotime() - $start);
-		if ($this->DEBUG) print "\nDEBUG: ($time latency) Received " . strlen($packet) . " bytes from $ip:$port ...\n"; // . $this->hexdump($packet) . "\n";
+		if ($this->DEBUG) print "DEBUG: ($time latency) Received " . strlen($packet) . " bytes from $ip:$port ...<br>\n";// . $this->hexdump($packet) . "";
 
 		$header = substr($packet, 0, 4);				// get the 4 byte header
 		// ugly 64bit hack. If the PHP_INT_SIZE is not 4 then we'll use "i" to unpack the header.
@@ -576,11 +578,11 @@ function _sendquery($ipport, $cmd) {
 		// i can't get anything else to work since PHP is a bitch when it comes to large 32bit+ integers.
 		$ack = @unpack(PHP_INT_SIZE == 4 ? 'V' : 'i', $header);
 		$split = $ack[1];
-		if ($this->DEBUG) printf("DEBUG: ACK = 0x%X (%d)\n", $split, $split);
+		if ($this->DEBUG) printf("DEBUG: ACK = 0x%X (%d)<br>\n", $split, $split);
 		if ($split == -2) {						// we need to deal with multiple packets
-			if ($this->DEBUG) printf("DEBUG: Response is split!\n");
+			if ($this->DEBUG) printf("DEBUG: Response is split!<br>\n");
 
-			$packet = substr($packet, 4);				// strip off the leading 4 bytes
+			$packet = substr($packet, 3);				// strip off the leading 4 bytes
 			$header = substr($packet, 0, 4);			// get the 'sub-header ack'
 			$packet = substr($packet, 4);				// strip off 32bit ID
 
@@ -654,7 +656,7 @@ function _sendquery($ipport, $cmd) {
 			$packets[0] = $packet;
 			$expected = 0;
 		}
-		if ($this->DEBUG) print $this->hexdump($original) . "\n";
+		if ($this->DEBUG) print "\n" . $this->hexdump($original) . "\n";
 	} while ($expected and $retry < $this->maxretries());
 
 	fclose($this->sock);
