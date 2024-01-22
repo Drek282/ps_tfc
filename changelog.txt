@@ -11,3 +11,4 @@ Version 3.2.8n (in progress)
 * [Added] Reset button next to the search field on the Players page.
 * [Fixed] Search string length limited to 50 characters.
 * [Fixed] CSRF protection.
+* [Added] Credits page.
