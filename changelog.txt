@@ -12,4 +12,4 @@ Version 3.2.8n (in progress)
 * [Fixed] Search string length limited to 50 characters.
 * [Fixed] CSRF protection.
 * [Added] Credits page.
-* [Added] Header note when bot stats are included in human stats but bots are not ranked.
+* [Added] Header note when bot stats are included in human stats but bots are not listed.

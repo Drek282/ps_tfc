@@ -25,12 +25,12 @@
 			{if $plr.rank}
 			<h2>
 				{if $conf.theme.permissions.show_plr_flags}{flagimg cc=$plr.cc}{/if} {iconimg icon=$plr.icon} {$plr.name|escape} <#is ranked#> <strong>#{$plr.rank}</strong> <#out of#> <strong>{$totalranked|commify}</strong>{if $top1percentile} (<#top 1 percentile#>){/if}
-				{if $i_bots}— <small>BOT stats are included in player stats but BOT's are not ranked</small>{/if}
+				{if $i_bots}— <small>BOT stats are included in player stats but BOT's are not listed</small>{/if}
 			</h2>
 			{else}
 			<h2>
 				{if $conf.theme.permissions.show_plr_flags}{flagimg cc=$plr.cc}{/if} {iconimg icon=$plr.icon} {$plr.name|escape} <#is not ranked#>
-				{if $i_bots}— <small>BOT stats are included in player stats but BOT's are not ranked</small>{/if}
+				{if $i_bots}— <small>BOT stats are included in player stats but BOT's are not listed</small>{/if}
 			</h2>
 			{/if}
 		</div>
