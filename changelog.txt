@@ -13,3 +13,5 @@ Version 3.2.8n (in progress)
 * [Fixed] CSRF protection.
 * [Added] Credits page.
 * [Added] Header note when bot stats are included in human stats but bots are not listed.
+* [Improved] The CC theme is now a child theme.
+* [Improved] Streamlined the CSS of child themes.
