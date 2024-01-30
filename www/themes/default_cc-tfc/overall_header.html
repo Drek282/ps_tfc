@@ -25,8 +25,8 @@
 <!--#OVERALL_HEADER_MENU#-->
 <div id="ps-overall-menu">
 <div id="ps-menu-right">
-{if $show_login}
-<a id="ps-login-link" href="{url _base='login.php'}" title="<#Quick Login Popup#>"><img id="ps-login-img" src="{theme->parent_url}/img/menu-login-icon.png" alt="<#Login#>"></a>
+{if $show_login and $cookieconsent}
+<a id="ps-login-link" href="{url _base='login.php'}" title="<#Quick Login Popup#>"><img id="ps-login-img" src="{theme->url}/img/menu-login-icon.png" alt="<#Login#>"></a>
 {/if}
 <a href="credits.php" title="<#Credits#>"><img class="ps-icon" src="{theme->url}/img/icons/ps_logo_16X16.png" alt="Credits"></a>
 </div>
@@ -48,7 +48,7 @@
 {if $conf.theme.map.google_key}
 	<li><a href="{url _base='overview.php'}"><#Overview#></a></li>
 {/if}
-{if $show_admin}
+{if $show_admin and $cookieconsent}
 	<li><a href="{url _base='admin/index.php'}"><#Admin#></a></li>
 {/if}
 {if !ps_user_logged_in() and $show_login and $cookieconsent}
@@ -61,7 +61,7 @@
 </div>
 <!---->
 
-{if !ps_user_logged_in()}
+{if !ps_user_logged_in() and $cookieconsent}
 <!--#LOGIN_POPUP#-->
 <form method="post" action="{url _base='login.php' _ref=1}">
 <div id="ps-login-popup" style="display: none">
