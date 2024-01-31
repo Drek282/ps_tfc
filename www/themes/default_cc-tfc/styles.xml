@@ -17,7 +17,7 @@
 		<!-- Define overall stylesheets for all pages -->
 		<css href="css/overall.css" />
 		<css href="css/content.css" />
-		<css href="css/cc.css" loadlast="1" />
+		<css href="css/cc-tfc.css" loadlast="1" />
 		<!-- Define overall javascripts for all pages -->
 		<script>
 			{* these variables are used in various js routines throughout the stats *}

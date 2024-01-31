@@ -85,6 +85,14 @@ body.psychostats {
 	text-align: left;
 }
 
+#ps-title-logo {
+	position: relative;
+	margin: 0 10px;
+	width: 64;
+	float: left;
+	z-index: 1;
+}
+
 #ps-page-privacy {
 	background: #ccc;
 }
