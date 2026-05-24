@@ -18,3 +18,4 @@ Version 3.2.8n (in progress)
 * [Improved] Larger TFC icon on player page.
 * [Removed] Mod specific theme.
 * [Added] Mod logo.
+* [Improved] [Chore] Make pod2html happy.
